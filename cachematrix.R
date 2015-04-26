@@ -36,3 +36,23 @@ cacheSolve <- function(x, ...) {
   
       
 }
+
+## Example:
+## Define Matrix: x = rbind(c(10, -5), c(-5, 10))
+## Create a list of functions concerning: m = makeCacheMatrix(x)
+## Show the Matrix: 
+## > m$get()
+##      [,1] [,2]
+## [1,]   10   -5
+## [2,]   -5   10
+## Compute inversed matrix for the first time:
+## > cacheSolve(m)
+##           [,1]       [,2]
+##[1,] 0.13333333 0.06666667
+##[2,] 0.06666667 0.13333333
+## Compute inversed matrix for the second time, data is taken from cache:
+## > cacheSolve(m)
+##getting cached data.
+##           [,1]       [,2]
+##[1,] 0.13333333 0.06666667
+##[2,] 0.06666667 0.13333333
